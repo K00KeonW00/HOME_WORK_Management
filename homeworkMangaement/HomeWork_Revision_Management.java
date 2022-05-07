@@ -1,11 +1,50 @@
 package homework1;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class HomeWork_Revision_Management {
 	
 
 	public static void main(String[] args) {
+		
+		ArrayList<Homework_Viewer>a = new ArrayList <Homework_Viewer>();
+		Homework_Viewer h1 = new Homework_Viewer();
+		Homework_Viewer h2 = new Homework_Viewer();
+		Homework_Viewer h3 = new Homework_Viewer();
+		
+		h1.setHomework_Viewer(220001, "Thermal_Dynamic", 3);
+		h2.setHomework_Viewer(220002, "Computer_Vision", 3);
+		h3.setHomework_Viewer(220003, "Computing_Intelligence", 2);
+		
+		a.add(h1);
+		a.add(h2);
+		a.add(h3);
+		a.remove(h3);
+		
+		
+		
+		System.out.println(" ************************ NEW Add The Subjet of Major ************************ ");
+		System.out.println (h1.getNAME());
+		System.out.println (h2.getNAME());
+		
+		System.out.println(" ************************ Searching the Subject Information ************************ ");
+		Scanner in = new Scanner(System.in);
+		System.out.println("Please inset the Subject Name that if you want the Specific Information : ");
+		String Code = in.next();
+		
+		for (int i = 0; i<a.size(); i++) {
+			
+			Homework_Viewer out = a.get(i);
+			
+			if (Code.equals(out.getNAME())) {
+				System.out.println("Subject Number is : " + out.getSID() + "," + "Subjcet Credit" + out.getNOS()+"학점 ");
+			}
+				
+			
+		}
+		
+		
 		Scanner input = new Scanner(System.in);
 		System.out.println(" ************************ Thank you for join this Management System ************************ ");
 		System.out.println(" If you want that Next Step ----- 1 ");
@@ -31,7 +70,8 @@ public class HomeWork_Revision_Management {
 		System.out.println(" 2. Show me the Paused - HomeWork List ");
 		System.out.println(" 3. Finished-HomeWork List ");
 		System.out.println(" 4. Revision that yours Information ) ");
-		System.out.println(" 5. EXIT ");
+		System.out.println(" 5. Looking That the Charge of Lecture ");
+		System.out.println(" 6. EXIT ");
 	
 		
 		System.out.print( "Choice the Number : " );
@@ -118,6 +158,12 @@ public class HomeWork_Revision_Management {
 			System.out.println("  ");
 			System.out.print(" Hello User :  ");
 			homwork_menu p = new homwork_menu();
+			//
+			//
+			//
+			//
+			//
+			//
 			
 			System.out.println(p.getSNAME());
 			System.out.print(" and your SID Number is :  ");
@@ -134,6 +180,23 @@ public class HomeWork_Revision_Management {
 			System.out.println(p.getSNAME());
 			System.out.print("and Your SID is : ");
 			System.out.println(p.getSID());
+		}
+		
+		
+		else if ( Secnum == 5 ) { 
+			System.out.println("  ");
+			System.out.println( "You Want that Looking that your's Charge of the Lecture?" );
+			System.out.println("  ");
+			
+			Implement_Charge ic = new Implement_Calc();
+			
+			ic.degree3();
+			ic.degree1();
+			ic.PrintInfo();
+			
+			
+			
+			
 		}
 		
 		
