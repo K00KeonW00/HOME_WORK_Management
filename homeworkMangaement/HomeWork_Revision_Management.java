@@ -8,6 +8,25 @@ public class HomeWork_Revision_Management {
 
 	public static void main(String[] args) {
 		
+		try {
+			int num = getNum();
+		}
+		
+		catch (MyException e) {
+			System.out.println("올바른 PW를 입하세요. : ");
+			e.printStackTrace();
+			
+		}
+		
+		
+		while(true) { 
+			System.out.println("시스템을 다시 부팅하세요, 실행할 수 없는 암호입니다."); 
+			
+			break;
+			}	
+			
+	
+		
 		ArrayList<Homework_Viewer>a = new ArrayList <Homework_Viewer>();
 		Homework_Viewer h1 = new Homework_Viewer();
 		Homework_Viewer h2 = new Homework_Viewer();
@@ -328,19 +347,30 @@ public class HomeWork_Revision_Management {
 	
 	
 	
+public static int getNum() throws MyException {
+		
+	
+		System.out.println("PW를 입력하세요.------------ PW 힌트 : 학번 20XX 000000, 학번 뒷자리 6자리 숫자 입력. ");
+		System.out.print("올바른 PW를 입력하면 프로그램이 실행됩니다. : ");	
+		Scanner in = new Scanner(System.in);
+		int num = in.nextInt();
+		
+		if ( num != 80165 ) {
+			
+			throw new MyException();
+			
+		}
+		
+		else {
+			System.out.println("환영합니다. ");
+		}
+		
+		return num;
+	}	
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	
 	
