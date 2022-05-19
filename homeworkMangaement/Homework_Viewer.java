@@ -1,9 +1,6 @@
 package homework1;
 
 public class Homework_Viewer extends homwork_menu {
-	public class homwork_menu {
-
-	}
 	public int SID;
 	public String NAME;
 	public int NOS;

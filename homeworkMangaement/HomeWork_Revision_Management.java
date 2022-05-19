@@ -2,6 +2,11 @@ package homework1;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class HomeWork_Revision_Management {
 	
@@ -19,11 +24,29 @@ public class HomeWork_Revision_Management {
 		}
 		
 		
-		while(true) { 
-			System.out.println("시스템을 다시 부팅하세요, 실행할 수 없는 암호입니다."); 
+		Date date = new Date ();
+		
+		SimpleDateFormat format = new SimpleDateFormat ("yyy-MM-dd HH:mm:ss");
+		
+		try {
 			
-			break;
-			}	
+			FileOutputStream file = new FileOutputStream("log.txt");
+			
+		}
+		
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+			
+		}
+		
+		catch (IOException e) {
+			e.printStackTrace();
+			
+		}
+		
+		
+		System.out.println ("사용자 접근 시간 : " + format.format(date));
+		
 			
 	
 		
@@ -350,7 +373,7 @@ public class HomeWork_Revision_Management {
 public static int getNum() throws MyException {
 		
 	
-		System.out.println("PW를 입력하세요.------------ PW 힌트 : 학번 20XX 000000, 학번 뒷자리 6자리 숫자 입력. ");
+		System.out.println("학생의 학번 뒷자리를 누르세요 . ");
 		System.out.print("올바른 PW를 입력하면 프로그램이 실행됩니다. : ");	
 		Scanner in = new Scanner(System.in);
 		int num = in.nextInt();
