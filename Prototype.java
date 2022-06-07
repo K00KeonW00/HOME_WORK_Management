@@ -1,7 +1,8 @@
 // 경상국립대학교 항공우주및소프트웨어공학전공  2020080165 구건우.
 // 본 프로젝트는 2022년도 객체지향프로그래밍 수업을 위한 X-ManagementSystem 실습프로젝트 입니다.
-// 본 과제는 본인 고유의 창작물이며, 교제와 명시된 참고문헌과 자료를 제외한 그 어떠한 부정한 방법도 사용되지 않았습니다.
+// 본 과제는 본인 고유의 창작물이며, 하단에 명시된 참고문헌과 자료를 제외한 그 어떠한 부정한 방법도 사용되지 않았습니다.
 // 최종수정 : 2022.06.08.
+
 
 package Homework_Management;
 
@@ -513,7 +514,6 @@ class HomworkandSubject {
  String profname;
  String subject;
 
-// ArrayList<Stu> s = new ArrayList<Stu>();
  
  public HomworkandSubject(String date, String ma, String profnam, String subject) {
   this.duedate = date;
@@ -532,5 +532,6 @@ class HWManager {
 // [2] : https://www.crocus.co.kr/551 : 라디오박스 참고자료
 // [3] : Java의 정석
 // [4] : https://whiteit.tistory.com/111 : 콤보박스 참고자료
-//
+// 본 과제는 한 학기동안 학습하였던 GUI 및 기타 내용 외에도 "ScrollPane", "RadioBox", "Combo-Box"등 배우지 않았던 부분들도 다소 존재합니다.
+// 따라서 오해의 여지를 미연에 방지하고자, 개념 및 코드 작성과 관련해 참고했던 자료들을 하단에 Reference로 명시하였습니다.
 
